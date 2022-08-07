@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Send mail
 
 on:
   workflow_dispatch:
