@@ -1,0 +1,48 @@
+lockfileVersion: 5.4
+
+specifiers:
+  dotenv: ^16.0.1
+  nodemailer: ^6.7.7
+  run-at: ^2.1.0
+
+dependencies:
+  dotenv: 16.0.1
+  nodemailer: 6.7.7
+  run-at: 2.1.0
+
+packages:
+
+  /date.js/0.2.2:
+    resolution: {integrity: sha512-suuyM51+IOIsxJ8ZfdxejuJ63MbsP1NCdFpeGIUpZHEvudI3yqYe4yqZR39Roc7WLoyKXJjNpT3G3x3H1NB0Xw==}
+    dependencies:
+      debug: 0.7.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /debug/0.7.4:
+    resolution: {integrity: sha512-EohAb3+DSHSGx8carOSKJe8G0ayV5/i609OD0J2orCkuyae7SyZSz2aoLmQF2s0Pj5gITDebwPH7GFBlqOUQ1Q==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dev: false
+
+  /dotenv/16.0.1:
+    resolution: {integrity: sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==}
+    engines: {node: '>=12'}
+    dev: false
+
+  /nodemailer/6.7.7:
+    resolution: {integrity: sha512-pOLC/s+2I1EXuSqO5Wa34i3kXZG3gugDssH+ZNCevHad65tc8vQlCQpOLaUjopvkRQKm2Cki2aME7fEOPRy3bA==}
+    engines: {node: '>=6.0.0'}
+    dev: false
+
+  /run-at/2.1.0:
+    resolution: {integrity: sha512-EYhxHW5WZ4EE5BNKTRhWWimNkJUdA89pBjyz13AsqEqyRPESboN/WSplBtASEUxqJdAP+qZz7s7sRA/7FQBQCg==}
+    dependencies:
+      date.js: 0.2.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: false

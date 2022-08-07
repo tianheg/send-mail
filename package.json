@@ -1,0 +1,19 @@
+{
+  "name": "send-mail",
+  "version": "1.0.0",
+  "description": "Send mail regularly",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "mail"
+  ],
+  "author": "tianheg <me@tianheg.xyz>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "nodemailer": "^6.7.7",
+    "run-at": "^2.1.0"
+  }
+}
