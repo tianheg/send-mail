@@ -1,5 +1,7 @@
 # Send Mail
 
+Check if you can send me emails properly
+
 ## Tools
 
 - run-at
