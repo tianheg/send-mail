@@ -34,5 +34,7 @@ jobs:
       - name: Send mail
         run: node mail.js
         env:
+          SEND: ${{ secrets.SEND }}
+          TO: ${{ secrets.TO }}
           PASS:  ${{ secrets.PASS }}
           DOMAIN: ${{ secrets.DOMAIN }}

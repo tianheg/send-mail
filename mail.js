@@ -6,9 +6,9 @@ require("dotenv").config();
 // get whois info
 whois.lookup(process.env.DOMAIN, (error, data) => {
 	async function main() {
-		const user = "yidajiabei@qq.com";
+		const user = process.env.SEND;
 		const pass = process.env.PASS;
-		const to = "me@tianheg.xyz";
+		const to = process.env.TO;
 
 		const time = new Date();
 		const year = time.getFullYear();
