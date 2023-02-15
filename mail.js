@@ -30,7 +30,7 @@ whois.lookup(process.env.DOMAIN, (error, data) => {
 			from: `tianheg <${user}>`,
 			to: `域名邮箱 <${to}>`, // list of receivers
 			subject: `今日 ${year}-${month}-${day} 测试`, // Subject line
-			text: data.slice(0, 936), // plain text body
+			//text: data.slice(0, 936), // plain text body
 		});
 
 		console.log("Message sent: %s", info.messageId);
