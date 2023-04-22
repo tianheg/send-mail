@@ -48,4 +48,4 @@ jobs:
           SEND: ${{ secrets.SEND }}
           TO: ${{ secrets.TO }}
           PASS:  ${{ secrets.PASS }}
-          DOMAIN: ${{ secrets.DOMAIN }}
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
