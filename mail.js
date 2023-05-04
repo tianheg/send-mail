@@ -1,17 +1,12 @@
-const nodemailer = require('nodemailer');
-// const whois = require("whois");
+import nodemailer from 'nodemailer';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
-require('dotenv').config();
-
-// get whois info
-// whois.lookup(process.env.DOMAIN, (error, data) => {});
-
-// get weather
 const weatherApiKey = process.env.WEATHER_API_KEY;
 
 // docs output: https://openweathermap.org/current#current_JSON
 fetch(
-  `https://api.openweathermap.org/data/2.5/weather?id=1793684&appid=${weatherApiKey}`
+  `https://api.caiyunapp.com/v2.5/${weatherApiKey}/115.62203,33.16026/daily?dailysteps=1`
 )
   .then((res) => res.json())
   .then((data) => {
@@ -40,14 +35,17 @@ fetch(
         from: `tianheg <${user}>`,
         to: `域名邮箱 <${to}>`,
         subject: `今日 ${year}-${month}-${day} 测试`,
-        text: `今天太和 ${data.weather[0].main}, 平均气温在 ${Math.floor(
-          data.main.temp - 273.15
-        )}℃`,
+        text: `今天太和温度区间 ${data.result.daily.temperature[0].min}-${
+          data.result.daily.temperature[0].max
+        }℃, 平均气温在 ${Math.floor(
+          data.result.daily.temperature[0].avg
+        )}℃，空气质量——PM2.5指数 ${
+          data.result.daily.air_quality.pm25[0].max
+        }、空气质量指数AQI ${data.result.daily.air_quality.aqi[0].max.chn}`,
       });
 
       console.log(data);
       console.log('Message sent: %s', info.messageId);
-      // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
     }
     main().catch(console.error);
   });
